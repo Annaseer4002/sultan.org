@@ -1,0 +1,332 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* displaying navigation list in flex */
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1rem;    
+}
+
+/* styling link list */
+.nav-list a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #FFBF00;
+  
+}
+
+/* adding border for nav list items */
+.list {
+    border: solid 2px #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* hover for nav list items */
+.nav-list :hover {
+    border: none;
+    font-weight: bold;
+}
+
+/* styling menu icon & hide on large devices */
+.menu-btn {
+    display: none;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 20px;
+    
+}
+
+/* styling the categories button */
+.categories-btn {
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+/* hover for menu and categories button */
+.menu-btn:hover, .categories-btn:hover {
+    background-color: #808000;
+}
+
+
+main {
+    margin: 0 20px;
+}
+
+/* 
+.jumbotron {
+    width: 100%;
+    height: 100vh;
+    background: url(images/Rectangle\ 4137.jpg) no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    
+}
+
+#search {
+    width: 50%;
+    height: 30px;
+    margin-top: 20px;
+    padding: 10px;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    opacity: 1;
+    
+      
+} */
+
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+    text-align: center;
+    text-overflow: auto;
+}
+
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/Rectangle\ 4137.jpg) no-repeat;
+    background-size: cover;
+    opacity: 0.7; /* Adjust the opacity value as needed */
+    z-index: -1;
+    border-radius: 15px;
+      
+}
+
+#search {
+    width: 50%;
+    height: 30px;
+    margin-top: 20px;
+    padding: 15px;
+    border: solid 1px #000;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    color: #000;
+    opacity: 1; /* Ensure the search input is fully opaque */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  
+}
+
+.jumbotron h1 {
+    text-transform: capitalize;
+    color: #FFBF00;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to make text more visible */
+  
+}
+
+.jumbotron p {
+    margin-top: -20px;
+    text-transform: capitalize;
+    color: #fff;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Add shadow to make text more visible */
+    
+}
+
+.tiles {
+   margin-top: 50px;
+}
+
+.tiles-header {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  
+}
+.tiles-header span{
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+
+.tiles-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+ 
+}
+
+.tiles-img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.tiles-img img {
+    width: 100%;
+    height: 100%; 
+    text-align: center;  
+}
+
+.tiles-img:hover {
+    width: 220px;
+    transition: 0.2s ease;
+}
+
+
+.tiles-img span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .9);    
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    margin-top: 30px;
+    text-transform: capitalize;
+    /* font-family: h; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-tiles {
+    width: 250px;
+}
+
+.footer-tiles p {
+    margin-top: -10px;
+}
+
+
+
+ 
+
+
+
+
+@media (max-width: 500px) {
+
+    /* hiding navigation list on small devices */
+    .nav-list {
+        display: none;
+    }
+
+/* hiding on small devices */
+    .categories-btn {
+        display: none;
+    }
+
+/* displaying menu icon on small devices */
+    .menu-btn {
+        display: block;
+        font-size: .8rem;
+    }
+
+    /* adjusting logo on small devices */
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #search {
+        width: 50%;
+        height: 20px;
+        padding: 10px;
+      
+    }
+
+
+
+    .jumbotron {
+        height: 300px;
+       
+    }
+
+    .jumbotron::before {
+        border-radius: 0;
+    }
+
+    .jumbotron h1 {
+        font-size: 1.5rem;    
+    }
+
+    .jumbotron p {
+        font-size: 1rem;
+        margin-top: -10px;
+    }
+
+    .tiles-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+       
+      }
+
+      .tiles-header {
+          font-size: 1rem;
+      }
+
+
+      .tiles-img {
+        position: relative;
+        width: 250px;
+        height: 200px;
+        
+    }
+    .tiles-img:hover {
+        width: 260px;
+        transition: 0.2s ease;
+    }
+    
+}
