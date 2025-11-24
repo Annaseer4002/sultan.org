@@ -77,6 +77,10 @@ header {
     margin-right: 20px;
 }
 
+#categories-list {
+    display: none;
+}
+
 /* hover for menu and categories button */
 .menu-btn:hover, .categories-btn:hover {
     background-color: #808000;
@@ -129,7 +133,7 @@ main {
     height: 100%;
     background: url(images/Rectangle\ 4137.jpg) no-repeat;
     background-size: cover;
-    opacity: 0.7; /* Adjust the opacity value as needed */
+    /* opacity: 0.7; Adjust the opacity value as needed */
     z-index: -1;
     border-radius: 15px;
       
@@ -172,6 +176,9 @@ main {
 }
 
 .tiles {
+    background-color: #fcf9f9;
+    padding: 20px;
+    border-radius: 10px;
    margin-top: 50px;
 }
 
@@ -229,7 +236,7 @@ main {
 footer {
     background-color: #000;
     color: #fff;
-    margin-top: 30px;
+    margin-top: 80px;
     text-transform: capitalize;
     /* font-family: h; */
     display: flex;
